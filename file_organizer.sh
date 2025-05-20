@@ -27,7 +27,7 @@ for file in "$dir"/*; do
         name=$(basename "$file")
         ext="${name##*.}"
         
-        case "${ext,,}" in
+        case "$ext" in
             jpg|png|gif)
                 dest="$dir/Images/$name" ;;
             pdf|docx|txt)
